@@ -102,7 +102,7 @@ let switch3 = document.getElementById('switch3');
 
 let checked = document.getElementById('switch1');
 
-let slides = document.getElementsByClassName('slide__container');
+let slides = document.getElementsByClassName('slide');
 
 let slider = document.getElementById('slider');
 
