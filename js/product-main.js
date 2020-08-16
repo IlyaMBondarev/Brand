@@ -86,44 +86,55 @@ for (let i = 1; i < menuBtns.length; i++) {
 
 
 
-let switch1 = document.getElementById('switch1');
-let switch2 = document.getElementById('switch2');
-let switch3 = document.getElementById('switch3');
 
-let checked = document.getElementById('switch1');
+//settings size
+let settingsSizesBtns = document.querySelectorAll('.setting-size-btn');
+let settingsSizes = document.querySelectorAll('.setting-size');
+let choosedSize = document.querySelector('.setting-size-choose');
 
-let slides = document.getElementsByClassName('slide');
+for (let i = 0; i < settingsSizesBtns.length; i++) {
+    settingsSizesBtns[i].addEventListener('click', () => {
+        choosedSize.textContent = settingsSizes[i].textContent;
+    })
+}
 
-let slider = document.getElementById('slider');
 
-slider.style.height = slides[0].offsetHeight + "px";
+//settings color
+let settingsColorsBtns = document.querySelectorAll('.setting-color-btn');
+let settingsColors = document.querySelectorAll('.setting-color');
+let choosedColor = document.querySelector('.setting-color-choose');
+let choosedColorBlock = document.querySelector('.settings__color-choosed');
 
-switch1.addEventListener('click', function () {
-    if (!switch1.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch1.classList.add('checked');
-        slider.classList.remove('second-slide', 'third-slide');
-        slider.classList.add('first-slide');
-        checked = document.getElementById('switch1');
+for (let i = 0; i < settingsSizesBtns.length; i++) {
+    settingsColorsBtns[i].addEventListener('click', () => {
+        choosedColorBlock.classList.remove(`color-${choosedColor.textContent.toLowerCase()}`);
+        choosedColor.textContent = settingsColors[i].textContent;
+        choosedColorBlock.classList.add(`color-${choosedColor.textContent.toLowerCase()}`);
+    })
+}
+
+
+
+let settingsArrowsDown = document.querySelectorAll('.settings__arrow-down');
+let settingsArrowsUp = document.querySelectorAll('.settings__arrow-up');
+let settingsMainBtns = document.querySelectorAll('.settings__button-main');
+let settingsLists = document.querySelectorAll('.settings__hidden-text');
+
+for( let i = 0; i < settingsMainBtns.length; i++){
+    toggle(settingsMainBtns[i], settingsLists[i]);
+    toggle(settingsMainBtns[i], settingsArrowsDown[i]);
+    toggle(settingsMainBtns[i], settingsArrowsUp[i]);
+}
+
+document.addEventListener('click', event => {
+    let target = event.target;
+    for (let i = 0; i < settingsMainBtns.length; i++) {
+        if (!(target === settingsMainBtns[i] || settingsMainBtns[i].contains(target)) && !(settingsLists[i].classList.contains('hidden'))) {
+            settingsLists[i].classList.add('hidden');
+            settingsArrowsUp[i].classList.add('hidden');
+            settingsArrowsDown[i].classList.remove('hidden');
+        }
     }
 })
 
-switch2.addEventListener('click', function () {
-    if (!switch2.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch2.classList.add('checked');
-        slider.classList.remove('first-slide', 'third-slide');
-        slider.classList.add('second-slide');
-        checked = document.getElementById('switch2');
-    }
-})
 
-switch3.addEventListener('click', function () {
-    if (!switch3.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch3.classList.add('checked');
-        slider.classList.remove('first-slide', 'second-slide');
-        slider.classList.add('third-slide');
-        checked = document.getElementById('switch3');
-    }
-})
