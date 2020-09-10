@@ -86,44 +86,40 @@ for (let i = 1; i < menuBtns.length; i++) {
 
 
 
-let switch1 = document.getElementById('switch1');
-let switch2 = document.getElementById('switch2');
-let switch3 = document.getElementById('switch3');
 
-let checked = document.getElementById('switch1');
 
-let slides = document.getElementsByClassName('slide');
 
-let slider = document.getElementById('slider');
+let countryArrowsDown = document.querySelectorAll('.settings__arrow-down');
+let countryArrowsUp = document.querySelectorAll('.settings__arrow-up');
+let countryMainBtns = document.querySelectorAll('.settings__button-main');
+let countryLists = document.querySelectorAll('.country__hidden-text');
 
-slider.style.height = slides[0].offsetHeight + "px";
+for( let i = 0; i < countryMainBtns.length; i++){
+    toggle(countryMainBtns[i], countryLists[i]);
+    toggle(countryMainBtns[i], countryArrowsDown[i]);
+    toggle(countryMainBtns[i], countryArrowsUp[i]);
+}
 
-switch1.addEventListener('click', function () {
-    if (!switch1.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch1.classList.add('checked');
-        slider.classList.remove('second-slide', 'third-slide');
-        slider.classList.add('first-slide');
-        checked = document.getElementById('switch1');
+document.addEventListener('click', event => {
+    let target = event.target;
+    for (let i = 0; i < countryMainBtns.length; i++) {
+        if (!(target === countryMainBtns[i] || countryMainBtns[i].contains(target)) && !(countryLists[i].classList.contains('hidden'))) {
+            countryLists[i].classList.add('hidden');
+            countryArrowsUp[i].classList.add('hidden');
+            countryArrowsDown[i].classList.remove('hidden');
+        }
     }
 })
 
-switch2.addEventListener('click', function () {
-    if (!switch2.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch2.classList.add('checked');
-        slider.classList.remove('first-slide', 'third-slide');
-        slider.classList.add('second-slide');
-        checked = document.getElementById('switch2');
-    }
-})
 
-switch3.addEventListener('click', function () {
-    if (!switch3.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch3.classList.add('checked');
-        slider.classList.remove('first-slide', 'second-slide');
-        slider.classList.add('third-slide');
-        checked = document.getElementById('switch3');
-    }
-})
+
+//country
+let CountriesBtns = document.querySelectorAll('.setting-country-btn');
+let Countries = document.querySelectorAll('.setting-country');
+let choosedCountry = document.querySelector('.setting-country-choose');
+
+for (let i = 0; i < CountriesBtns.length; i++) {
+    CountriesBtns[i].addEventListener('click', () => {
+        choosedCountry.textContent = Countries[i].textContent;
+    })
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Страница товара</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -478,48 +478,155 @@
             Hot Deals</a><div class="nav__arrow hidden"></div>
             </li>
     </ul>
-</nav>        <div class="content">
-            <div class="banner">
-                <div class="container">
-                    <div class="banner__image">
-                        <div class="banner__content">
-                            <p class="banner__title">THE BRAND</p>
-                            <p class="banner__subtitle">OF LUXERIOUS <span class="red">FASHION</span></p>
-                        </div>
+</nav><div class="arrivals">
+    <div class="container">
+        <p class="arrivals__title red">New Arrivals</p>
+        <div class="arrivals__links">
+            <a href="index.html">Home</a>
+            <a href="">Men</a>
+            <a class="red" href="">New Arrivals</a>
+        </div>
+    </div>
+</div>        <div class="content">
+            <div class="goods-slider">
+                <img src="img/products/large/good.jpg" alt="good" class="good">
+                <div class="arrows">
+                    <div class="arrow-block-hover arrow-block-hover-left">
+                        <button class="arrow-block">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <div class="arrow-block-hover arrow-block-hover-right">
+                        <button class="arrow-block">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="category container">
-                <div class="category__column">
-                    <div class="category__row">
-                        <div class="category__content"><p class="category__title">hOT dEAL</p>
-                            <p class="category__subtitle red">FOR MEN</p></div>
-                        <img src="img/main/category/01.jpg" alt="1"></div>
-                    <div class="category__row">
-                        <div class="category__content"><p class="category__title">LUXIROUS & trendy</p>
-                            <p class="category__subtitle red">ACCESORIES</p></div>
-                        <img src="img/main/category/02.jpg" alt="2"></div>
-                </div>
-                <div class="category__column">
-                    <div class="category__row">
-                        <div class="category__content"><p class="category__title">30% offer</p>
-                            <p class="category__subtitle red">women</p></div>
-                        <img src="img/main/category/03.jpg" alt="3"></div>
-                    <div class="category__row">
-                        <div class="category__content"><p class="category__title">new arrivals</p>
-                            <p class="category__subtitle red">FOR kids</p></div>
-                        <img src="img/main/category/04.jpg" alt="4"></div>
+            <div class="info container">
+                <div class="info-block-main">
+                    <div class="info-block">
+                        <div class="info__collection">
+                            <p class="info__collection-title red">WOMEN COLLECTION</p>
+                            <div class="info__collection-border"></div>
+                        </div>
+                        <p class="info__name">Moschino Cheap And Chic</p>
+                        <div class="info__stars">
+                            <div id="reviewStars-input" class="reviewStars-input" style="display: block">
+                                <input id="star-4" class="star-4" type="radio" name="reviewStars"/>
+                                <label title="gorgeous" for="star-4"></label>
+
+                                <input id="star-3" class="star-3" type="radio" name="reviewStars"/>
+                                <label title="good" for="star-3"></label>
+
+                                <input id="star-2" class="star-2" type="radio" name="reviewStars"/>
+                                <label title="regular" for="star-2"></label>
+
+                                <input id="star-1" class="star-1" type="radio" name="reviewStars"/>
+                                <label title="poor" for="star-1"></label>
+
+                                <input id="star-0" class="star-0" type="radio" name="reviewStars"/>
+                                <label title="bad" for="star-0"></label>
+                            </div>
+                        </div>
+                        <p class="info__content">Compellingly actualize fully researched processes before proactive
+                            outsourcing. Progressively syndicate collaborative architectures before cutting-edge
+                            services. Completely visualize parallel core competencies rather than exceptional
+                            portals.</p>
+                        <div class="info__details">
+                            <div class="info__details-block">
+                                <p class="info__details-paragraph">MATERIAL: <span>COTTON</span></p>
+                            </div>
+                            <div class="info__details-block">
+                                <p class="info__details-paragraph">DESIGNER: <span>BINBURHAN</span></p>
+                            </div>
+                        </div>
+                        <p class="info__price">&#36;561</p>
+                    </div>
+                    <div class="info-block">
+                        <div class="info__settings settings">
+                            <div class="settings__column">
+                                <p class="settings__title">CHOOSE COLOR</p>
+                                <div class="settings__button-main settings__button">
+                                    <div class="settings__main-choice settings__choice">
+                                        <div class="settings__color settings__color-choosed color-red"></div>
+                                        <p class="settings__text setting-color-choose">Red</p>
+                                    </div>
+                                    <div class="settings__hidden-text hidden">
+                                        <div class="settings__button setting-color-btn">
+                                            <div class="settings__color color-red setting-color-block"></div>
+                                            <p class="settings__text setting-color">Red</p>
+                                        </div>
+                                        <div class="settings__button setting-color-btn">
+                                            <div class="settings__color color-green setting-color-block"></div>
+                                            <p class="settings__text setting-color">Green</p>
+                                        </div>
+                                        <div class="settings__button setting-color-btn">
+                                            <div class="settings__color color-blue setting-color-block"></div>
+                                            <p class="settings__text setting-color">Blue</p>
+                                        </div>
+                                        <div class="settings__button setting-color-btn">
+                                            <div class="settings__color color-grey setting-color-block"></div>
+                                            <p class="settings__text setting-color">Grey</p>
+                                        </div>
+                                        <div class="settings__button setting-color-btn">
+                                            <div class="settings__color color-black setting-color-block"></div>
+                                            <p class="settings__text setting-color">Black</p>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-down settings__arrow-down"></i>
+                                    <i class="fas fa-chevron-up settings__arrow-up hidden"></i>
+                                </div>
+                            </div>
+                            <div class="settings__column">
+                                <p class="settings__title">CHOOSE SIZE</p>
+                                <div class="settings__button-main settings__button">
+                                    <p class="settings__text setting-size-choose">XXL</p>
+                                    <div class="settings__hidden-text hidden">
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">XXS</p>
+                                        </div>
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">XS</p>
+                                        </div>
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">S</p>
+                                        </div>
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">M</p>
+                                        </div>
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">L</p>
+                                        </div>
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">XL</p>
+                                        </div>
+                                        <div class="settings__button setting-size-btn">
+                                            <p class="settings__text setting-size">XXL</p>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-down settings__arrow-down"></i>
+                                    <i class="fas fa-chevron-up settings__arrow-up hidden"></i>
+                                </div>
+                            </div>
+                            <div class="settings__column">
+                                <p class="settings__title">QUANTITY</p>
+                                <input type="text" class="settings__input" placeholder="2">
+                            </div>
+                        </div>
+                        <button class="info__button"><img src="img/cart_red.svg" alt="cart">Add to Cart</button>
+                    </div>
                 </div>
             </div>
-            <div class="main-products container">
-                <p class="main-products__title">Fetured Items</p>
-                <p class="main-products__subtitle">Shop for items based on what we featured in this week</p>
+
+            <div class="products container">
+                <p class="products__title">you may like also</p>
                 <div class="main-products__products">
                     <div class="main-product product">
                         <div class="product__links">
                             <a href="#" class="product__to-cart">
                                 <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/01.jpg" alt="1" class="product__image"></a>
+                            <a href="product.html"><img src="img/products/big/09.jpg" alt="9" class="product__image"></a>
                         </div>
                         <a href="product.html" class="product__name">Mango People T-shirt</a>
                         <div class="product__bottom">
@@ -546,7 +653,7 @@
                         <div class="product__links">
                             <a href="#" class="product__to-cart">
                                 <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/02.jpg" alt="2" class="product__image"></a>
+                            <a href="product.html"><img src="img/products/big/10.jpg" alt="2" class="product__image"></a>
                         </div>
                         <a href="product.html" class="product__name">Mango People T-shirt</a>
                         <div class="product__bottom">
@@ -573,7 +680,7 @@
                         <div class="product__links">
                             <a href="#" class="product__to-cart">
                                 <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/03.jpg" alt="3" class="product__image"></a>
+                            <a href="product.html"><img src="img/products/big/11.jpg" alt="3" class="product__image"></a>
                         </div>
                         <a href="product.html" class="product__name">Mango People T-shirt</a>
                         <div class="product__bottom">
@@ -600,7 +707,7 @@
                         <div class="product__links">
                             <a href="#" class="product__to-cart">
                                 <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/04.jpg" alt="4" class="product__image"></a>
+                            <a href="product.html"><img src="img/products/big/12.jpg" alt="4" class="product__image"></a>
                         </div>
                         <a href="product.html" class="product__name">Mango People T-shirt</a>
                         <div class="product__bottom">
@@ -621,141 +728,6 @@
                                 <input id="star-0-4" class="star-0" type="radio" name="reviewStars-4"/>
                                 <label title="bad" for="star-0-4"></label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="main-product product">
-                        <div class="product__links">
-                            <a href="#" class="product__to-cart">
-                                <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/05.jpg" alt="5" class="product__image"></a>
-                        </div>
-                        <a href="product.html" class="product__name">Mango People T-shirt</a>
-                        <div class="product__bottom">
-                            <span class="product__price red">&#36;52.00</span>
-                            <div id="reviewStars-input-5" class="reviewStars-input">
-                                <input id="star-4-5" class="star-4" type="radio" name="reviewStars-5"/>
-                                <label title="gorgeous" for="star-4-5"></label>
-
-                                <input id="star-3-5" class="star-3" type="radio" name="reviewStars-5"/>
-                                <label title="good" for="star-3-5"></label>
-
-                                <input id="star-2-5" class="star-2" type="radio" name="reviewStars-5"/>
-                                <label title="regular" for="star-2-5"></label>
-
-                                <input id="star-1-5" class="star-1" type="radio" name="reviewStars-5"/>
-                                <label title="poor" for="star-1-5"></label>
-
-                                <input id="star-0-5" class="star-0" type="radio" name="reviewStars-5"/>
-                                <label title="bad" for="star-0-5"></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-product product">
-                        <div class="product__links">
-                            <a href="#" class="product__to-cart">
-                                <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/06.jpg" alt="6" class="product__image"></a>
-                        </div>
-                        <a href="product.html" class="product__name">Mango People T-shirt</a>
-                        <div class="product__bottom">
-                            <span class="product__price red">&#36;52.00</span>
-                            <div id="reviewStars-input-6" class="reviewStars-input">
-                                <input id="star-4-6" class="star-4" type="radio" name="reviewStars-6"/>
-                                <label title="gorgeous" for="star-4-6"></label>
-
-                                <input id="star-3-6" class="star-3" type="radio" name="reviewStars-6"/>
-                                <label title="good" for="star-3-6"></label>
-
-                                <input id="star-2-6" class="star-2" type="radio" name="reviewStars-6"/>
-                                <label title="regular" for="star-2-6"></label>
-
-                                <input id="star-1-6" class="star-1" type="radio" name="reviewStars-6"/>
-                                <label title="poor" for="star-1-6"></label>
-
-                                <input id="star-0-6" class="star-0" type="radio" name="reviewStars-6"/>
-                                <label title="bad" for="star-0-6"></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-product product">
-                        <div class="product__links">
-                            <a href="#" class="product__to-cart">
-                                <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/07.jpg" alt="7" class="product__image"></a>
-                        </div>
-                        <a href="product.html" class="product__name">Mango People T-shirt</a>
-                        <div class="product__bottom">
-                            <span class="product__price red">&#36;52.00</span>
-                            <div id="reviewStars-input-7" class="reviewStars-input">
-                                <input id="star-4-7" class="star-4" type="radio" name="reviewStars-7"/>
-                                <label title="gorgeous" for="star-4-7"></label>
-
-                                <input id="star-3-7" class="star-3" type="radio" name="reviewStars-7"/>
-                                <label title="good" for="star-3-7"></label>
-
-                                <input id="star-2-7" class="star-2" type="radio" name="reviewStars-7"/>
-                                <label title="regular" for="star-2-7"></label>
-
-                                <input id="star-1-7" class="star-1" type="radio" name="reviewStars-7"/>
-                                <label title="poor" for="star-1-7"></label>
-
-                                <input id="star-0-7" class="star-0" type="radio" name="reviewStars-7"/>
-                                <label title="bad" for="star-0-7"></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-product product">
-                        <div class="product__links">
-                            <a href="#" class="product__to-cart">
-                                <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span></a>
-                            <a href="product.html"><img src="img/products/big/08.jpg" alt="8" class="product__image"></a>
-                        </div>
-                        <a href="product.html" class="product__name">Mango People T-shirt</a>
-                        <div class="product__bottom">
-                            <span class="product__price red">&#36;52.00</span>
-                            <div id="reviewStars-input-8" class="reviewStars-input">
-                                <input id="star-4-8" class="star-4" type="radio" name="reviewStars-8"/>
-                                <label title="gorgeous" for="star-4-8"></label>
-
-                                <input id="star-3-8" class="star-3" type="radio" name="reviewStars-8"/>
-                                <label title="good" for="star-3-8"></label>
-
-                                <input id="star-2-8" class="star-2" type="radio" name="reviewStars-8"/>
-                                <label title="regular" for="star-2-8"></label>
-
-                                <input id="star-1-8" class="star-1" type="radio" name="reviewStars-8"/>
-                                <label title="poor" for="star-1-8"></label>
-
-                                <input id="star-0-8" class="star-0" type="radio" name="reviewStars-8"/>
-                                <label title="bad" for="star-0-8"></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="main-products__link">Browse All Product &rarr;</a>
-            </div>
-            <div class="feature">
-                <div class="feature__left">
-                    <p class="feature__offer-title">30% <span class="red">OFFER</span></p>
-                    <p class="feature__offer-subtitle">FOR WOMEN</p>
-                </div>
-                <div class="feature__right">
-                    <div class="feature__column">
-                        <div class="feature__icon"><img src="img/main/feature/car.png" alt="car"></div>
-                        <div class="feature__icon"><img src="img/main/feature/percent.png" alt="percent"></div>
-                        <div class="feature__icon"><img src="img/main/feature/crown.png" alt="crown"></div></div>
-                    <div class="feature__column">
-                        <div class="feature__row">
-                            <p class="feature__title">Free Delivery</p>
-                            <p class="feature__content">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                        </div>
-                        <div class="feature__row">
-                            <p class="feature__title">Sales & discounts</p>
-                            <p class="feature__content">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                        </div>
-                        <div class="feature__row">
-                            <p class="feature__title">Quality assurance</p>
-                            <p class="feature__content">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive models.</p>
                         </div>
                     </div>
                 </div>
@@ -865,5 +837,5 @@
     </div>
 </footer>    </main>
 </div>
-<script src="js/main.js"></script></body>
+<script src="js/product-main.js"></script></body>
 </html>

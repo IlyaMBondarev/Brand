@@ -4,9 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
+    <title>Каталог</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $("#slider-range").slider({
+                range: true,
+                min: 10,
+                max: 700,
+                values: [ 52, 400 ],
+                slide: function( event, ui ) {
+                    $("#min").val("$" + ui.values[ 0 ]);
+                    $("#max").val("$" + ui.values[ 1 ]);
+                }
+            });
+            $("#min").val("$" + $("#slider-range").slider("values", 0));
+            $("#max").val("$" + $("#slider-range").slider("values", 1));
+        } );
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -488,263 +507,550 @@
         </div>
     </div>
 </div>        <div class="content container">
-            <div class="checkout-list">
-                <div class="checkout">
-                    <div class="checkout__title">01. Shipping Adress</div>
-                    <div class="checkout__list">
-                        <div class="checkout__block">
-                            <div class="checkout__left">
-                                <p class="checkout__subtitle">Check as a guest or register</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <div class="checkout__question">
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio1-1">checkout as guest
-                                            <input id="checkout-radio1-1" type="radio" name="checkout">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio2-1">register
-                                            <input id="checkout-radio2-1" type="radio" name="checkout" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
+            <div class="catalog-content">
+                <div class="catalog-navigation navigation">
+                    <div class="navigation__block">
+                        <div class="navigation__btn">
+                            <p class="navigation__title">Category</p>
+                            <i class="fas fa-caret-down navigation__arrow-down"></i>
+                            <i class="fas fa-caret-up navigation__arrow-up hidden"></i>
+                        </div>
+                        <ul class="navigation__menu">
+                            <li class="navigation__list"><a href="#" class="navigation__link">Accessories</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Bags</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Denim</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Hoodies & Sweatshirts</a>
+                            </li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Jackets & Coats</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Pants</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Polos</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shirts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shoes</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shorts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Sweaters & Knits</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">T-Shirts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Tanks</a></li>
+                        </ul>
+                    </div>
+                    <div class="navigation__block">
+                        <div class="navigation__btn">
+                            <p class="navigation__title">BRAND</p>
+                            <i class="fas fa-caret-down navigation__arrow-down"></i>
+                            <i class="fas fa-caret-up navigation__arrow-up hidden"></i>
+                        </div>
+                        <ul class="navigation__menu">
+                            <li class="navigation__list"><a href="#" class="navigation__link">Accessories</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Bags</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Denim</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Hoodies & Sweatshirts</a>
+                            </li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Jackets & Coats</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Pants</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Polos</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shirts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shoes</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shorts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Sweaters & Knits</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">T-Shirts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Tanks</a></li>
+                        </ul>
+                    </div>
+                    <div class="navigation__block">
+                        <div class="navigation__btn">
+                            <p class="navigation__title">dESIGNER</p>
+                            <i class="fas fa-caret-down navigation__arrow-down"></i>
+                            <i class="fas fa-caret-up navigation__arrow-up hidden"></i>
+                        </div>
+                        <ul class="navigation__menu">
+                            <li class="navigation__list"><a href="#" class="navigation__link">Accessories</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Bags</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Denim</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Hoodies & Sweatshirts</a>
+                            </li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Jackets & Coats</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Pants</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Polos</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shirts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shoes</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Shorts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Sweaters & Knits</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">T-Shirts</a></li>
+                            <li class="navigation__list"><a href="#" class="navigation__link">Tanks</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <div class="catalog__sort sort">
+                        <div class="sort__top">
+                            <div class="sort__column">
+                                <p class="sort__title">Trending now</p>
+                                <div class="sort__menu">
+                                    <ul class="sort__trends">
+                                        <li class="sort__trend">
+                                            <button class="sort__trend-btn">Bohemian</button>
+                                        </li>
+                                        <li class="sort__trend">
+                                            <button class="sort__trend-btn">Floral</button>
+                                        </li>
+                                        <li class="sort__trend">
+                                            <button class="sort__trend-btn">Lace</button>
+                                        </li>
+                                    </ul>
+                                    <ul class="sort__trends">
+                                        <li class="sort__trend">
+                                            <button class="sort__trend-btn">Floral</button>
+                                        </li>
+                                        <li class="sort__trend">
+                                            <button class="sort__trend-btn">Lace</button>
+                                        </li>
+                                        <li class="sort__trend">
+                                            <button class="sort__trend-btn">Bohemian</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sort__column">
+                                <p class="sort__title">Size</p>
+                                <div class="sort__menu">
+                                    <ul class="sort__checkboxes">
+                                        <li class="sort__checkbox">
+                                            <input id="sizeXXS" type="checkbox" value="XXS">
+                                            <label for="sizeXXS"><span><i class="fa fa-check"></i></span>XXS</label>
+                                        </li>
+                                        <li class="sort__checkbox">
+                                            <input id="sizeXS" type="checkbox" value="XS">
+                                            <label for="sizeXS"><span><i class="fa fa-check"></i></span>XS</label>
+                                        </li>
+                                        <li class="sort__checkbox">
+                                            <input id="sizeS" type="checkbox" value="S">
+                                            <label for="sizeS"><span><i class="fa fa-check"></i></span>S</label>
+                                        </li>
+                                        <li class="sort__checkbox">
+                                            <input id="sizeM" type="checkbox" value="M">
+                                            <label for="sizeM"><span><i class="fa fa-check"></i></span>M</label>
+                                        </li>
+                                    </ul>
+                                    <ul class="sort__checkboxes">
+                                        <li class="sort__checkbox">
+                                            <input id="sizeL" type="checkbox" value="L">
+                                            <label for="sizeL"><span><i class="fa fa-check"></i></span>L</label>
+                                        </li>
+                                        <li class="sort__checkbox">
+                                            <input id="sizeXL" type="checkbox" value="XL">
+                                            <label for="sizeXL"><span><i class="fa fa-check"></i></span>XL</label>
+                                        </li>
+                                        <li class="sort__checkbox">
+                                            <input id="sizeXXL" type="checkbox" value="XXL">
+                                            <label for="sizeXXL"><span><i class="fa fa-check"></i></span>XXL</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sort__column">
+                                <p class="sort__title">pRICE</p>
+                                <div class="sort__menu">
+                                    <div id="slider-range"></div>
+                                    <div class="sort__inputs">
+                                        <input type="text" id="min" readonly style="border:0;">
+                                        <input type="text" id="max" readonly style="border:0;">
                                     </div>
                                 </div>
-                                <p class="checkout__subtitle">register and save time!</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <p class="checkout__paragraph" style="margin-top: 30px">&raquo; Fast and easy checkout</p>
-                                <p class="checkout__paragraph">&raquo; Easy access to your order history and status</p>
-                                <button class="checkout__button">Continue</button>
                             </div>
-                            <div class="checkout__right">
-                                <p class="checkout__subtitle">Already registed?</p>
-                                <p class="checkout__paragraph">Please log in below</p>
-                                <form action="#" class="checkout__form form">
-                                    <p class="form__title">EMAIL ADDRESS <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="form__title">PASSWORD <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="checkout__paragraph red"><span class="form__require-mark">*</span>Required Fileds</p>
-                                    <button class="checkout__button">Log in</button>
-                                    <a href="" class="form__link">Forgot Password ?</a>
-                                </form>
+                        </div>
+                        <div class="sort__bottom">
+                            <div class="sort__filter">
+                                <div class="sort__filter-left">
+                                    <p class="sort__filter-name">Sort By</p>
+                                </div>
+                                <div class="sort__filter-right">
+                                    <select name="filter-sort-by" id="sort-by">
+                                        <option value="name" selected>Name</option>
+                                        <option value="price">Price</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="sort__filter">
+                                <div class="sort__filter-left">
+                                    <p class="sort__filter-name">Show</p>
+                                </div>
+                                <div class="sort__filter-right">
+                                    <select name="filter-show" id="show">
+                                        <option value="3">03</option>
+                                        <option value="9" selected>09</option>
+                                        <option value="15">15</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="checkout">
-                    <div class="checkout__title">02.   BILLING INFORMATION</div>
-                    <div class="checkout__list">
-                        <div class="checkout__block">
-                            <div class="checkout__left">
-                                <p class="checkout__subtitle">Check as a guest or register</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <div class="checkout__question">
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio1-2">checkout as guest
-                                            <input id="checkout-radio1-2" type="radio" name="checkout">
-                                            <span class="checkmark"></span>
-                                        </label>
+                    <div class="catalog__list">
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
                                     </div>
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio2-2">register
-                                            <input id="checkout-radio2-2" type="radio" name="checkout" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
                                     </div>
                                 </div>
-                                <p class="checkout__subtitle">register and save time!</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <p class="checkout__paragraph" style="margin-top: 30px">&raquo; Fast and easy checkout</p>
-                                <p class="checkout__paragraph">&raquo; Easy access to your order history and status</p>
-                                <button class="checkout__button">Continue</button>
+                                <a href="product.html"><img src="img/products/big/13.jpg" alt="1"
+                                                            class="product__image"></a>
                             </div>
-                            <div class="checkout__right">
-                                <p class="checkout__subtitle">Already registed?</p>
-                                <p class="checkout__paragraph">Please log in below</p>
-                                <form action="#" class="checkout__form form">
-                                    <p class="form__title">EMAIL ADDRESS <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="form__title">PASSWORD <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="checkout__paragraph red"><span class="form__require-mark">*</span>Required Fileds</p>
-                                    <button class="checkout__button">Log in</button>
-                                    <a href="" class="form__link">Forgot Password ?</a>
-                                </form>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-1" class="reviewStars-input">
+                                    <input id="star-4-1" class="star-4" type="radio" name="reviewStars-1"/>
+                                    <label title="gorgeous" for="star-4-1"></label>
+
+                                    <input id="star-3-1" class="star-3" type="radio" name="reviewStars-1"/>
+                                    <label title="good" for="star-3-1"></label>
+
+                                    <input id="star-2-1" class="star-2" type="radio" name="reviewStars-1"/>
+                                    <label title="regular" for="star-2-1"></label>
+
+                                    <input id="star-1-1" class="star-1" type="radio" name="reviewStars-1"/>
+                                    <label title="poor" for="star-1-1"></label>
+
+                                    <input id="star-0-1" class="star-0" type="radio" name="reviewStars-1"/>
+                                    <label title="bad" for="star-0-1"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/14.jpg" alt="2"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-2" class="reviewStars-input">
+                                    <input id="star-4-2" class="star-4" type="radio" name="reviewStars-2"/>
+                                    <label title="gorgeous" for="star-4-2"></label>
+
+                                    <input id="star-3-2" class="star-3" type="radio" name="reviewStars-2"/>
+                                    <label title="good" for="star-3-2"></label>
+
+                                    <input id="star-2-2" class="star-2" type="radio" name="reviewStars-2"/>
+                                    <label title="regular" for="star-2-2"></label>
+
+                                    <input id="star-1-2" class="star-1" type="radio" name="reviewStars-2"/>
+                                    <label title="poor" for="star-1-2"></label>
+
+                                    <input id="star-0-2" class="star-0" type="radio" name="reviewStars-2"/>
+                                    <label title="bad" for="star-0-2"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/15.jpg" alt="3"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-3" class="reviewStars-input">
+                                    <input id="star-4-3" class="star-4" type="radio" name="reviewStars-3"/>
+                                    <label title="gorgeous" for="star-4-3"></label>
+
+                                    <input id="star-3-3" class="star-3" type="radio" name="reviewStars-3"/>
+                                    <label title="good" for="star-3-3"></label>
+
+                                    <input id="star-2-3" class="star-2" type="radio" name="reviewStars-3"/>
+                                    <label title="regular" for="star-2-3"></label>
+
+                                    <input id="star-1-3" class="star-1" type="radio" name="reviewStars-3"/>
+                                    <label title="poor" for="star-1-3"></label>
+
+                                    <input id="star-0-3" class="star-0" type="radio" name="reviewStars-3"/>
+                                    <label title="bad" for="star-0-3"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/16.jpg" alt="4"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-4" class="reviewStars-input">
+                                    <input id="star-4-4" class="star-4" type="radio" name="reviewStars-4"/>
+                                    <label title="gorgeous" for="star-4-4"></label>
+
+                                    <input id="star-3-4" class="star-3" type="radio" name="reviewStars-4"/>
+                                    <label title="good" for="star-3-4"></label>
+
+                                    <input id="star-2-4" class="star-2" type="radio" name="reviewStars-4"/>
+                                    <label title="regular" for="star-2-4"></label>
+
+                                    <input id="star-1-4" class="star-1" type="radio" name="reviewStars-4"/>
+                                    <label title="poor" for="star-1-4"></label>
+
+                                    <input id="star-0-4" class="star-0" type="radio" name="reviewStars-4"/>
+                                    <label title="bad" for="star-0-4"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/17.jpg" alt="5"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-5" class="reviewStars-input">
+                                    <input id="star-4-5" class="star-4" type="radio" name="reviewStars-5"/>
+                                    <label title="gorgeous" for="star-4-5"></label>
+
+                                    <input id="star-3-5" class="star-3" type="radio" name="reviewStars-5"/>
+                                    <label title="good" for="star-3-5"></label>
+
+                                    <input id="star-2-5" class="star-2" type="radio" name="reviewStars-5"/>
+                                    <label title="regular" for="star-2-5"></label>
+
+                                    <input id="star-1-5" class="star-1" type="radio" name="reviewStars-5"/>
+                                    <label title="poor" for="star-1-5"></label>
+
+                                    <input id="star-0-5" class="star-0" type="radio" name="reviewStars-5"/>
+                                    <label title="bad" for="star-0-5"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/18.jpg" alt="6"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-6" class="reviewStars-input">
+                                    <input id="star-4-6" class="star-4" type="radio" name="reviewStars-6"/>
+                                    <label title="gorgeous" for="star-4-6"></label>
+
+                                    <input id="star-3-6" class="star-3" type="radio" name="reviewStars-6"/>
+                                    <label title="good" for="star-3-6"></label>
+
+                                    <input id="star-2-6" class="star-2" type="radio" name="reviewStars-6"/>
+                                    <label title="regular" for="star-2-6"></label>
+
+                                    <input id="star-1-6" class="star-1" type="radio" name="reviewStars-6"/>
+                                    <label title="poor" for="star-1-6"></label>
+
+                                    <input id="star-0-6" class="star-0" type="radio" name="reviewStars-6"/>
+                                    <label title="bad" for="star-0-6"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/19.jpg" alt="7"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-7" class="reviewStars-input">
+                                    <input id="star-4-7" class="star-4" type="radio" name="reviewStars-7"/>
+                                    <label title="gorgeous" for="star-4-7"></label>
+
+                                    <input id="star-3-7" class="star-3" type="radio" name="reviewStars-7"/>
+                                    <label title="good" for="star-3-7"></label>
+
+                                    <input id="star-2-7" class="star-2" type="radio" name="reviewStars-7"/>
+                                    <label title="regular" for="star-2-7"></label>
+
+                                    <input id="star-1-7" class="star-1" type="radio" name="reviewStars-7"/>
+                                    <label title="poor" for="star-1-7"></label>
+
+                                    <input id="star-0-7" class="star-0" type="radio" name="reviewStars-7"/>
+                                    <label title="bad" for="star-0-7"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/20.jpg" alt="8"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-8" class="reviewStars-input">
+                                    <input id="star-4-8" class="star-4" type="radio" name="reviewStars-8"/>
+                                    <label title="gorgeous" for="star-4-8"></label>
+
+                                    <input id="star-3-8" class="star-3" type="radio" name="reviewStars-8"/>
+                                    <label title="good" for="star-3-8"></label>
+
+                                    <input id="star-2-8" class="star-2" type="radio" name="reviewStars-8"/>
+                                    <label title="regular" for="star-2-8"></label>
+
+                                    <input id="star-1-8" class="star-1" type="radio" name="reviewStars-8"/>
+                                    <label title="poor" for="star-1-8"></label>
+
+                                    <input id="star-0-8" class="star-0" type="radio" name="reviewStars-8"/>
+                                    <label title="bad" for="star-0-8"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-product product">
+                            <div class="product__links">
+                                <div class="product__links-block links-block">
+                                    <div class="links-block__top">
+                                        <a href="#">
+                                            <img src="img/cart_white.svg" alt="cart"><span>Add to Cart</span>
+                                        </a>
+                                    </div>
+                                    <div class="links-block__bottom">
+                                        <a href="#"><i class="fas fa-retweet"></i></a>
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="product.html"><img src="img/products/big/21.jpg" alt="8"
+                                                            class="product__image"></a>
+                            </div>
+                            <a href="product.html" class="product__name">Mango People T-shirt</a>
+                            <div class="product__bottom">
+                                <span class="product__price red">&#36;52.00</span>
+                                <div id="reviewStars-input-9" class="reviewStars-input">
+                                    <input id="star-4-9" class="star-4" type="radio" name="reviewStars-9"/>
+                                    <label title="gorgeous" for="star-4-9"></label>
+
+                                    <input id="star-3-9" class="star-3" type="radio" name="reviewStars-9"/>
+                                    <label title="good" for="star-3-9"></label>
+
+                                    <input id="star-2-9" class="star-2" type="radio" name="reviewStars-9"/>
+                                    <label title="regular" for="star-2-9"></label>
+
+                                    <input id="star-1-9" class="star-1" type="radio" name="reviewStars-9"/>
+                                    <label title="poor" for="star-1-9"></label>
+
+                                    <input id="star-0-9" class="star-0" type="radio" name="reviewStars-9"/>
+                                    <label title="bad" for="star-0-9"></label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="checkout">
-                    <div class="checkout__title">03.   SHIPPING INFORMATION</div>
-                    <div class="checkout__list">
-                        <div class="checkout__block">
-                            <div class="checkout__left">
-                                <p class="checkout__subtitle">Check as a guest or register</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <div class="checkout__question">
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio1-3">checkout as guest
-                                            <input id="checkout-radio1-3" type="radio" name="checkout">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio2-3">register
-                                            <input id="checkout-radio2-3" type="radio" name="checkout" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <p class="checkout__subtitle">register and save time!</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <p class="checkout__paragraph" style="margin-top: 30px">&raquo; Fast and easy checkout</p>
-                                <p class="checkout__paragraph">&raquo; Easy access to your order history and status</p>
-                                <button class="checkout__button">Continue</button>
-                            </div>
-                            <div class="checkout__right">
-                                <p class="checkout__subtitle">Already registed?</p>
-                                <p class="checkout__paragraph">Please log in below</p>
-                                <form action="#" class="checkout__form form">
-                                    <p class="form__title">EMAIL ADDRESS <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="form__title">PASSWORD <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="checkout__paragraph red"><span class="form__require-mark">*</span>Required Fileds</p>
-                                    <button class="checkout__button">Log in</button>
-                                    <a href="" class="form__link">Forgot Password ?</a>
-                                </form>
-                            </div>
+                    <div class="catalog__btns">
+                        <div class="catalog__pagination pagination">
+                            <ul class="pagination__menu">
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button arrow-left disabled"><i class="fas fa-chevron-left"></i></a>
+                                </li>
+                                <li class="pagination__list first-page">
+                                    <a href="#" class="pagination__button red">1</a>
+                                </li>
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button">2</a>
+                                </li>
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button">3</a>
+                                </li>
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button">4</a>
+                                </li>
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button">5</a>
+                                </li>
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button">6</a>
+                                </li>
+                                <li class="pagination__list last-page">
+                                    <a href="#" class="pagination__button">20</a>
+                                </li>
+                                <li class="pagination__list">
+                                    <a href="#" class="pagination__button arrow-right"> <i class="fas fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="checkout">
-                    <div class="checkout__title">04.   SHIPPING METHOD</div>
-                    <div class="checkout__list">
-                        <div class="checkout__block">
-                            <div class="checkout__left">
-                                <p class="checkout__subtitle">Check as a guest or register</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <div class="checkout__question">
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio1-4">checkout as guest
-                                            <input id="checkout-radio1-4" type="radio" name="checkout">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio2-4">register
-                                            <input id="checkout-radio2-4" type="radio" name="checkout" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <p class="checkout__subtitle">register and save time!</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <p class="checkout__paragraph" style="margin-top: 30px">&raquo; Fast and easy checkout</p>
-                                <p class="checkout__paragraph">&raquo; Easy access to your order history and status</p>
-                                <button class="checkout__button">Continue</button>
-                            </div>
-                            <div class="checkout__right">
-                                <p class="checkout__subtitle">Already registed?</p>
-                                <p class="checkout__paragraph">Please log in below</p>
-                                <form action="#" class="checkout__form form">
-                                    <p class="form__title">EMAIL ADDRESS <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="form__title">PASSWORD <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="checkout__paragraph red"><span class="form__require-mark">*</span>Required Fileds</p>
-                                    <button class="checkout__button">Log in</button>
-                                    <a href="" class="form__link">Forgot Password ?</a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout">
-                    <div class="checkout__title">05.   PAYMENT METHOD</div>
-                    <div class="checkout__list">
-                        <div class="checkout__block">
-                            <div class="checkout__left">
-                                <p class="checkout__subtitle">Check as a guest or register</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <div class="checkout__question">
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio1-5">checkout as guest
-                                            <input id="checkout-radio1-5" type="radio" name="checkout">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio2-5">register
-                                            <input id="checkout-radio2-5" type="radio" name="checkout" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <p class="checkout__subtitle">register and save time!</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <p class="checkout__paragraph" style="margin-top: 30px">&raquo; Fast and easy checkout</p>
-                                <p class="checkout__paragraph">&raquo; Easy access to your order history and status</p>
-                                <button class="checkout__button">Continue</button>
-                            </div>
-                            <div class="checkout__right">
-                                <p class="checkout__subtitle">Already registed?</p>
-                                <p class="checkout__paragraph">Please log in below</p>
-                                <form action="#" class="checkout__form form">
-                                    <p class="form__title">EMAIL ADDRESS <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="form__title">PASSWORD <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="checkout__paragraph red"><span class="form__require-mark">*</span>Required Fileds</p>
-                                    <button class="checkout__button">Log in</button>
-                                    <a href="" class="form__link">Forgot Password ?</a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout">
-                    <div class="checkout__title">06.   ORDER REVIEW</div>
-                    <div class="checkout__list">
-                        <div class="checkout__block">
-                            <div class="checkout__left">
-                                <p class="checkout__subtitle">Check as a guest or register</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <div class="checkout__question">
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio1-6">checkout as guest
-                                            <input id="checkout-radio1-6" type="radio" name="checkout">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="checkout__radio">
-                                        <label for="checkout-radio2-6">register
-                                            <input id="checkout-radio2-6" type="radio" name="checkout" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <p class="checkout__subtitle">register and save time!</p>
-                                <p class="checkout__paragraph">Register with us for future convenience</p>
-                                <p class="checkout__paragraph" style="margin-top: 30px">&raquo; Fast and easy checkout</p>
-                                <p class="checkout__paragraph">&raquo; Easy access to your order history and status</p>
-                                <button class="checkout__button">Continue</button>
-                            </div>
-                            <div class="checkout__right">
-                                <p class="checkout__subtitle">Already registed?</p>
-                                <p class="checkout__paragraph">Please log in below</p>
-                                <form action="#" class="checkout__form form">
-                                    <p class="form__title">EMAIL ADDRESS <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="form__title">PASSWORD <span class="form__require-mark red">*</span></p>
-                                    <input type="text" class="form__input">
-                                    <p class="checkout__paragraph red"><span class="form__require-mark">*</span>Required Fileds</p>
-                                    <button class="checkout__button">Log in</button>
-                                    <a href="" class="form__link">Forgot Password ?</a>
-                                </form>
-                            </div>
-                        </div>
+                        <button class="catalog__view">View All</button>
                     </div>
                 </div>
             </div>
@@ -853,5 +1159,5 @@
     </div>
 </footer>    </main>
 </div>
-<script src="js/checkout-main.js"></script></body>
+<script src="js/catalog-main.js"></script></body>
 </html>

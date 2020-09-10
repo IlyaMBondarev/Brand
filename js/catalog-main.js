@@ -86,44 +86,26 @@ for (let i = 1; i < menuBtns.length; i++) {
 
 
 
-let switch1 = document.getElementById('switch1');
-let switch2 = document.getElementById('switch2');
-let switch3 = document.getElementById('switch3');
 
-let checked = document.getElementById('switch1');
+function toggleHeight(button, element) {
+    button.addEventListener('click', () => {
+        if (element.style.maxHeight == 0 || element.style.maxHeight == '0px') {
+            element.style.maxHeight = '600px';
+        } else {
+            element.style.maxHeight = '0';
+        }
+    })
+}
 
-let slides = document.getElementsByClassName('slide');
 
-let slider = document.getElementById('slider');
+let navigationBtns = document.querySelectorAll('.navigation__btn');
+let navigationMenus = document.querySelectorAll('.navigation__menu');
+let arrowsDown = document.querySelectorAll('.navigation__arrow-down');
+let arrowsUp = document.querySelectorAll('.navigation__arrow-up');
 
-slider.style.height = slides[0].offsetHeight + "px";
 
-switch1.addEventListener('click', function () {
-    if (!switch1.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch1.classList.add('checked');
-        slider.classList.remove('second-slide', 'third-slide');
-        slider.classList.add('first-slide');
-        checked = document.getElementById('switch1');
-    }
-})
-
-switch2.addEventListener('click', function () {
-    if (!switch2.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch2.classList.add('checked');
-        slider.classList.remove('first-slide', 'third-slide');
-        slider.classList.add('second-slide');
-        checked = document.getElementById('switch2');
-    }
-})
-
-switch3.addEventListener('click', function () {
-    if (!switch3.classList.contains('checked')) {
-        checked.classList.remove('checked');
-        switch3.classList.add('checked');
-        slider.classList.remove('first-slide', 'second-slide');
-        slider.classList.add('third-slide');
-        checked = document.getElementById('switch3');
-    }
-})
+for( let i = 0; i < navigationBtns.length; i++) {
+    toggleHeight(navigationBtns[i], navigationMenus[i]);
+    toggle(navigationBtns[i], arrowsDown[i]);
+    toggle(navigationBtns[i], arrowsUp[i]);
+}
